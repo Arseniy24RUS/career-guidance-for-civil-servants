@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>Профориентационный тест для госслужащих</title>
+    <meta name="description" content="Учебный профориентационный тест для студентов государственного управления.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="assets/i18n.js"></script>
     <style>
         :root {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -44,6 +46,15 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 12px;
+        }
+
+        .header-title {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .header-title h1 {
+            pointer-events: none;
         }
 
         .header-logo img {
@@ -289,20 +300,20 @@
             <img src="gerb_rf.png" alt="Герб Российской Федерации">
         </div>
         <div class="header-title">
-            <h1>Профориентационный тест для госслужащих</h1>
+            <h1 data-i18n="ui.title">Профориентационный тест для госслужащих</h1>
         </div>
     </header>
 
     <div class="intro">
-        <p>
+        <p data-i18n="ui.intro">
             Это учебный инструмент для ориентации студентов направления
             «Государственное и муниципальное управление» в системе федеральных органов
             исполнительной власти Российской Федерации.
         </p>
-        <p>
+        <p data-i18n="ui.scaleIntro">
             Тест измеряет выраженность шести параметров (шкал) вашего профессионального профиля:
         </p>
-        <p class="scale-legend">
+        <p class="scale-legend" data-i18n-html="ui.scaleLegend">
             <span><strong>P</strong> – правоприменение и контроль/надзор</span>
             <span><strong>S</strong> – социально-гуманитарная направленность</span>
             <span><strong>E</strong> – экономико-финансовая и рыночная направленность</span><br/>
@@ -313,25 +324,25 @@
     </div>
 
     <div class="questions" id="questions-container">
-        <h2>Насколько Вы согласны с приведёнными ниже утверждениями?</h2>
-        <p class="small-note">
+        <h2 data-i18n="ui.questionsTitle">Насколько Вы согласны с приведёнными ниже утверждениями?</h2>
+        <p class="small-note" data-i18n="ui.likertNote">
             Используется шкала Лайкерта: 1 – совершенно не согласен(на), 2 – скорее не согласен(на),
             3 – и да, и нет / затрудняюсь, 4 – скорее согласен(на), 5 – полностью согласен(на).
         </p>
     </div>
 
     <div class="controls">
-        <button id="calculate-btn">Рассчитать результат</button>
-        <span class="small-note">
+        <button id="calculate-btn" data-i18n="ui.calculate">Рассчитать результат</button>
+        <span class="small-note" data-i18n="ui.completeNote">
             Для корректного результата необходимо ответить на все вопросы.
         </span>
     </div>
 
     <div class="results" id="results-container" style="display:none;">
         <div class="card">
-            <h2>Ваш профиль по шкалам</h2>
+            <h2 data-i18n="ui.profileTitle">Ваш профиль по шкалам</h2>
             <canvas id="profileChart" width="400" height="400"></canvas>
-            <p class="small-note">
+            <p class="small-note" data-i18n="ui.chartNote">
                 Оси диаграммы соответствуют шкалам: P – правоприменение и контроль, S – социально-гуманитарная
                 направленность, E – экономико-финансовая направленность, I – международная ориентированность,
                 D – цифровые технологии и данные, T – территориальная/«полевой» характер работы.
@@ -339,17 +350,17 @@
             </p>
         </div>
         <div class="card">
-            <h2>Наиболее близкие к вашему профилю ФОИВ (ТОП-5)</h2>
+            <h2 data-i18n="ui.topTitle">Наиболее близкие к вашему профилю ФОИВ (ТОП-5)</h2>
             <ol class="top-org-list" id="top-org-list"></ol>
         </div>
         <div class="card">
-            <h3>Полный рейтинг всех органов (по мере увеличения расстояния профилей)</h3>
+            <h3 data-i18n="ui.fullRankingTitle">Полный рейтинг всех органов (по мере увеличения расстояния профилей)</h3>
             <table class="org-table" id="org-table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Орган</th>
-                        <th>Расстояние</th>
+                        <th data-i18n="ui.bodyHeader">Орган</th>
+                        <th data-i18n="ui.distanceHeader">Расстояние</th>
                         <th>P</th>
                         <th>S</th>
                         <th>E</th>
@@ -360,14 +371,14 @@
                 </thead>
                 <tbody></tbody>
             </table>
-            <p class="small-note">
+            <p class="small-note" data-i18n="ui.distanceNote">
                 Расстояние – квадрат евклидова расстояния между вашим вектором (P, S, E, I, D, T)
                 и профилем органа. Чем меньше значение, тем ближе профиль.
             </p>
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" data-i18n-html="ui.footer">
         Автор: Ситковский Арсений Михайлович, e-mail: <a href="mailto:omnistat@yandex.ru">omnistat@yandex.ru</a>
     </div>
 </div>
@@ -495,19 +506,23 @@
 
     function renderQuestions() {
         const container = document.getElementById("questions-container");
+        container.querySelectorAll(".question-list").forEach(el => el.remove());
         const block = document.createElement("div");
+        block.className = "question-list";
         questions.forEach((q, index) => {
             const qDiv = document.createElement("div");
             qDiv.className = "question-block";
 
             const meta = document.createElement("div");
             meta.className = "question-meta";
-            meta.textContent = "Вопрос " + (index + 1) + " • Шкала: " + q.scale;
+            meta.textContent = window.AppI18n
+                ? window.AppI18n.t("ui.questionMeta", "Вопрос {{number}} • Шкала: {{scale}}", { number: index + 1, scale: q.scale })
+                : "Вопрос " + (index + 1) + " • Шкала: " + q.scale;
             qDiv.appendChild(meta);
 
             const text = document.createElement("div");
             text.className = "question-text";
-            text.textContent = q.text;
+            text.textContent = window.AppI18n ? window.AppI18n.t("questions." + q.id, q.text) : q.text;
             qDiv.appendChild(text);
 
             const optionsDiv = document.createElement("div");
@@ -551,7 +566,8 @@
                 }
             }
             if (selectedValue === null) {
-                alert("Пожалуйста, ответьте на все вопросы. Не отвечен вопрос № " + (i + 1) + ".");
+                const fallback = "Пожалуйста, ответьте на все вопросы. Не отвечен вопрос № " + (i + 1) + ".";
+                alert(window.AppI18n ? window.AppI18n.t("ui.answerRequired", fallback) : fallback);
                 return null;
             }
 
@@ -590,7 +606,7 @@
         const ctx = canvas.getContext("2d");
         const w = canvas.width;
         const h = canvas.height;
-        ctx.clearRect(0, 0, w, h);h
+        ctx.clearRect(0, 0, w, h);
 
         const centerX = w / 2;
         const centerY = h / 2;
@@ -598,12 +614,12 @@
         const maxValue = 5;
 
         const axisLabels = [
-            "P",
-            "S",
-            "E",
-            "I",
-            "D",
-            "T"
+            window.AppI18n ? window.AppI18n.t("ui.scaleLabels.P", "P") : "P",
+            window.AppI18n ? window.AppI18n.t("ui.scaleLabels.S", "S") : "S",
+            window.AppI18n ? window.AppI18n.t("ui.scaleLabels.E", "E") : "E",
+            window.AppI18n ? window.AppI18n.t("ui.scaleLabels.I", "I") : "I",
+            window.AppI18n ? window.AppI18n.t("ui.scaleLabels.D", "D") : "D",
+            window.AppI18n ? window.AppI18n.t("ui.scaleLabels.T", "T") : "T"
         ];
 
         const values = [
@@ -685,6 +701,7 @@
         const resultsContainer = document.getElementById("results-container");
         const topList = document.getElementById("top-org-list");
         const tableBody = document.getElementById("org-table").querySelector("tbody");
+        window.__lastProfile = profile;
 
         drawRadar(profile);
 
@@ -714,18 +731,20 @@
                 a.target = "_blank";
                 a.rel = "noopener noreferrer";
                 a.className = "top-org-name";
-                a.textContent = item.name;
+                a.textContent = window.AppI18n ? window.AppI18n.translateText(item.name) : item.name;
                 li.appendChild(a);
             } else {
                 const nameSpan = document.createElement("span");
                 nameSpan.className = "top-org-name";
-                nameSpan.textContent = item.name;
+                nameSpan.textContent = window.AppI18n ? window.AppI18n.translateText(item.name) : item.name;
                 li.appendChild(nameSpan);
             }
 
             const distSpan = document.createElement("span");
             distSpan.className = "distance";
-            distSpan.textContent = "расстояние: " + item.distance.toFixed(2);
+            distSpan.textContent = window.AppI18n
+                ? window.AppI18n.t("ui.distance", "расстояние: {{value}}", { value: item.distance.toFixed(2) })
+                : "расстояние: " + item.distance.toFixed(2);
             li.appendChild(distSpan);
 
             topList.appendChild(li);
@@ -748,10 +767,10 @@
                 a.href = item.url;
                 a.target = "_blank";
                 a.rel = "noopener noreferrer";
-                a.textContent = item.name;
+                a.textContent = window.AppI18n ? window.AppI18n.translateText(item.name) : item.name;
                 tdName.appendChild(a);
             } else {
-                tdName.textContent = item.name;
+                tdName.textContent = window.AppI18n ? window.AppI18n.translateText(item.name) : item.name;
             }
             tr.appendChild(tdName);
 
@@ -772,7 +791,21 @@
         resultsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", async () => {
+        window.addEventListener("i18n:change", () => {
+            renderQuestions();
+            if (window.__lastProfile) {
+                showResults(window.__lastProfile);
+            }
+            if (window.AppI18n) {
+                window.AppI18n.apply(document.body);
+            }
+        });
+
+        if (window.AppI18n && window.AppI18n.ready) {
+            await window.AppI18n.ready;
+        }
+
         renderQuestions();
         document.getElementById("calculate-btn").addEventListener("click", () => {
             const profile = calculateProfile();
