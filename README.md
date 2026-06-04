@@ -20,6 +20,16 @@ The project is designed for teaching and orientation rather than psychological d
 
 GitHub Pages: <https://arseniy24rus.github.io/career-guidance-for-civil-servants/>
 
+### Visual overview
+
+![English test hero screenshot](assets/visuals/hero-en.png)
+
+![English user scenario GIF](assets/visuals/scenario-en.gif)
+
+![English data architecture diagram](assets/visuals/architecture-en.svg)
+
+![English methodology diagram](assets/visuals/methodology-en.svg)
+
 ### Conceptual model
 
 The questionnaire uses six analytical scales:
@@ -82,6 +92,16 @@ Unless otherwise stated, source code is released under the MIT License. Educatio
 ### Публичный тест
 
 GitHub Pages: <https://arseniy24rus.github.io/career-guidance-for-civil-servants/>
+
+### Визуальный обзор
+
+![Скриншот теста на русском языке](assets/visuals/hero-ru.png)
+
+![GIF пользовательского сценария на русском языке](assets/visuals/scenario-ru.gif)
+
+![Схема архитектуры данных на русском языке](assets/visuals/architecture-ru.svg)
+
+![Методологическая схема на русском языке](assets/visuals/methodology-ru.svg)
 
 ### Концептуальная модель
 
