@@ -1,10 +1,10 @@
-# Career Guidance for Civil Servants · Public Administration Orientation Test
+﻿# Career Guidance for Civil Servants · Public Administration Orientation Test
 
 [English](#english) · [Русский](#русский)
 
 [![Live demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://arseniy24rus.github.io/career-guidance-for-civil-servants/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE-DOCS-AND-DATA.md)
+[![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](docs/license-docs-and-data.md)
 
 ---
 
@@ -84,7 +84,7 @@ If you use the tool in teaching, methodological materials or presentations, plea
 | Material | License | Notes |
 | --- | --- | --- |
 | Source code | [MIT](LICENSE) | Application code and developer tooling written for this repository. |
-| Documentation, data and educational content | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) | Questionnaire text, scale descriptions, diagrams, screenshots and docs unless otherwise stated. |
+| Documentation, data and educational content | [CC BY 4.0](docs/license-docs-and-data.md) | Questionnaire text, scale descriptions, diagrams, screenshots and docs unless otherwise stated. |
 | Third-party materials | Original terms | Official names, emblems/logos, libraries and external services remain under their own terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). |
 
 ---
@@ -165,5 +165,5 @@ python -m http.server 8000
 | Материалы | Лицензия | Примечания |
 | --- | --- | --- |
 | Исходный код | [MIT](LICENSE) | Код приложения и инструменты разработки, написанные для этого репозитория. |
-| Документация, данные и учебный контент | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) | Текст анкеты, описания шкал, диаграммы, скриншоты и документация, если явно не указано иное. |
+| Документация, данные и учебный контент | [CC BY 4.0](docs/license-docs-and-data.md) | Текст анкеты, описания шкал, диаграммы, скриншоты и документация, если явно не указано иное. |
 | Сторонние материалы | Условия оригинальных правообладателей | Официальные наименования, эмблемы/логотипы, библиотеки и внешние сервисы сохраняют собственные условия; см. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). |

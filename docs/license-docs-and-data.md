@@ -24,9 +24,9 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 ## Relationship to code and third-party materials
 
-Source code in this repository is licensed separately under the MIT License. See [LICENSE](LICENSE).
+Source code in this repository is licensed separately under the MIT License. See [LICENSE](../LICENSE).
 
-This license does not relicense official names, emblems, logos, trademarks, institutional materials, third-party libraries, external services, or other materials governed by separate terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+This license does not relicense official names, emblems, logos, trademarks, institutional materials, third-party libraries, external services, or other materials governed by separate terms. See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
 ---
 
@@ -56,6 +56,6 @@ This license does not relicense official names, emblems, logos, trademarks, inst
 
 ## Соотношение с кодом и сторонними материалами
 
-Исходный код распространяется отдельно по лицензии MIT. См. [LICENSE](LICENSE).
+Исходный код распространяется отдельно по лицензии MIT. См. [LICENSE](../LICENSE).
 
-Эта лицензия не перелицензирует официальные наименования, эмблемы, логотипы, товарные знаки, институциональные материалы, сторонние библиотеки, внешние сервисы и другие материалы, регулируемые отдельными условиями. См. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Эта лицензия не перелицензирует официальные наименования, эмблемы, логотипы, товарные знаки, институциональные материалы, сторонние библиотеки, внешние сервисы и другие материалы, регулируемые отдельными условиями. См. [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).

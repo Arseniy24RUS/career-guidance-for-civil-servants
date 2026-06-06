@@ -1,4 +1,4 @@
-# Contributing
+﻿# Contributing
 
 Thank you for helping improve this educational career-guidance tool. Contributions are welcome when they make the app clearer, more reproducible, easier to teach with, or easier to adapt responsibly.
 
@@ -44,7 +44,7 @@ The project is bilingual. User-facing documentation should be English first, the
 
 ## Licensing and third-party materials
 
-Code contributions are accepted under the MIT License. Documentation, data, questionnaire text, and educational content are accepted under CC BY 4.0. See [LICENSE](LICENSE), [LICENSE-DOCS-AND-DATA.md](LICENSE-DOCS-AND-DATA.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Code contributions are accepted under the MIT License. Documentation, data, questionnaire text, and educational content are accepted under CC BY 4.0. See [LICENSE](LICENSE), [docs/license-docs-and-data.md](docs/license-docs-and-data.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Do not add official symbols, logos, datasets, screenshots, copied text, or third-party media unless reuse rights are clear and notices are updated.
 
@@ -106,7 +106,7 @@ npx http-server . -a 127.0.0.1 -p 4178 -c-1
 
 ## Лицензии и сторонние материалы
 
-Код принимается по лицензии MIT. Документация, данные, текст анкеты и учебный контент принимаются по CC BY 4.0. См. [LICENSE](LICENSE), [LICENSE-DOCS-AND-DATA.md](LICENSE-DOCS-AND-DATA.md) и [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Код принимается по лицензии MIT. Документация, данные, текст анкеты и учебный контент принимаются по CC BY 4.0. См. [LICENSE](LICENSE), [docs/license-docs-and-data.md](docs/license-docs-and-data.md) и [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Не добавляйте официальные символы, логотипы, наборы данных, скриншоты, заимствованный текст или сторонние медиа, если права на повторное использование не ясны и уведомления не обновлены.
 
