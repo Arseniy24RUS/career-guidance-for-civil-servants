@@ -4,7 +4,7 @@
 
 [![Live demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://arseniy24rus.github.io/career-guidance-for-civil-servants/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE-DOCS-AND-DATA.md)
 
 ---
 
@@ -19,6 +19,10 @@ The project is designed for teaching and orientation rather than psychological d
 ### Live test
 
 GitHub Pages: <https://arseniy24rus.github.io/career-guidance-for-civil-servants/>
+
+### Methodology
+
+Detailed scoring, reverse-item handling, agency-profile distance logic and adaptation guidance are documented in [docs/methodology.md](docs/methodology.md).
 
 ### Visual overview
 
@@ -77,7 +81,11 @@ If you use the tool in teaching, methodological materials or presentations, plea
 
 ### License
 
-Unless otherwise stated, source code is released under the MIT License. Educational text, scale descriptions and documentation are released under Creative Commons Attribution 4.0 International (CC BY 4.0). Third-party visual assets, if any, remain subject to their own terms.
+| Material | License | Notes |
+| --- | --- | --- |
+| Source code | [MIT](LICENSE) | Application code and developer tooling written for this repository. |
+| Documentation, data and educational content | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) | Questionnaire text, scale descriptions, diagrams, screenshots and docs unless otherwise stated. |
+| Third-party materials | Original terms | Official names, emblems/logos, libraries and external services remain under their own terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). |
 
 ---
 
@@ -92,6 +100,10 @@ Unless otherwise stated, source code is released under the MIT License. Educatio
 ### Публичный тест
 
 GitHub Pages: <https://arseniy24rus.github.io/career-guidance-for-civil-servants/>
+
+### Методология
+
+Подробное описание расчета, обратных пунктов, дистанционной логики профилей органов и адаптации инструмента приведено в [docs/methodology.md](docs/methodology.md).
 
 ### Визуальный обзор
 
@@ -150,4 +162,8 @@ python -m http.server 8000
 
 ### Лицензия
 
-Если явно не указано иное, исходный код распространяется по лицензии MIT. Учебные тексты, описания шкал и документация распространяются по лицензии Creative Commons Attribution 4.0 International (CC BY 4.0). Сторонние визуальные материалы, если они используются, сохраняют собственные условия использования.
+| Материалы | Лицензия | Примечания |
+| --- | --- | --- |
+| Исходный код | [MIT](LICENSE) | Код приложения и инструменты разработки, написанные для этого репозитория. |
+| Документация, данные и учебный контент | [CC BY 4.0](LICENSE-DOCS-AND-DATA.md) | Текст анкеты, описания шкал, диаграммы, скриншоты и документация, если явно не указано иное. |
+| Сторонние материалы | Условия оригинальных правообладателей | Официальные наименования, эмблемы/логотипы, библиотеки и внешние сервисы сохраняют собственные условия; см. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). |
